@@ -26,4 +26,7 @@ $router->post('create', 'UserController@create');
   // $router->post('logout', 'LoginController@logout');
 	$router->get('profile', 'UserController@profile');
 
+	$router->post('ftp/upload', 'FtpController@upload');
+	$router->get('ftp/download', 'FtpController@download');
+
 //});
