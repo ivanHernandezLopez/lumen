@@ -14,3 +14,16 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->post('login', 'LoginController@login');
+$router->post('create', 'UserController@create');
+
+// aplicamos el middleware auth
+//$router->group(['middleware' => 'auth'], function() use ($router){
+  
+  // aqui van todas las rutas que se necesitar estar autenticado para el acceso
+  // $router->post('logout', 'LoginController@logout');
+	$router->get('profile', 'UserController@profile');
+
+//});
