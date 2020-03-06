@@ -27,7 +27,7 @@ class FtpController extends Controller
 	 
 	        $extension = $request->file($this->file)->getClientOriginalExtension();
 	 
-	        $this->filenametostore = $filename . '_' . date('dmY') . '.' . $extension;
+	        $this->filenametostore = $filename . '_' . date('dmYHis') . '.' . $extension;
 
 	        try {
 
