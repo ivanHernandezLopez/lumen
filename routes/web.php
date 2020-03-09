@@ -24,9 +24,15 @@ $router->post('create', 'UserController@create');
   
   // aqui van todas las rutas que se necesitar estar autenticado para el acceso
   // $router->post('logout', 'LoginController@logout');
-	$router->get('profile', 'UserController@profile');
+	/*$router->get('profile', 'UserController@profile');
 
 	$router->post('ftp/upload', 'FtpController@upload');
-	$router->get('ftp/download', 'FtpController@download');
+	$router->get('ftp/download', 'FtpController@download');*/
+
+	$router->get('licencias', 'LicenciaController@index');
+	$router->post('licencias', 'LicenciaController@create');
+	$router->get('licencias/{id}', 'LicenciaController@show');
+	$router->put('licencias/{id}', 'LicenciaController@update');
+	$router->delete('licencias/{id}', 'LicenciaController@destroy');
 
 //});
